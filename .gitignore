@@ -1,2 +1,15 @@
 var/cache/
 var/session/
+
+
+# sample data media
+media/catalog/
+media/custom_options/
+media/downloadable/files/
+media/email/
+media/tmp/
+media/wrapping/
+media/wysiwyg/
+media/xmlconnect/themes/
+skin/frontend/rwd/default/images/media/logo.png
+skin/frontend/rwd/default/images/media/logo_small.png
