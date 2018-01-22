@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <esime translate="label" module="crosssell">
+            <label>Esime Culhuacan</label>
+            <sort_order>0</sort_order>
+        </esime>
+    </tabs>
+    <sections>
+        <crosssell translate="label" module="crosssell">
+            <label>Cross-Sale</label>
+            <tab>esime</tab>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+
+            <groups>
+                <customer_config translate="label" module="crosssell">
+                    <label>Customer Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enabled>
+                        <number translate="label">
+                            <label>Number of total products in cross-sale</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </number>
+                        <selected translate="label">
+                            <label>Number of cross selling products selected from Magento admin.</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </selected>
+                        <random translate="label">
+                            <label>Number of random products for cross-selling</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </random>
+                        <bestsellers translate="label">
+                            <label>Number of best sell products for cross-sale</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </bestsellers>
+                        <viewed translate="label">
+                            <label>Number of recently viewed products for cross-sale</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </viewed>
+                        <rated translate="label">
+                            <label>Number of best rated products for cross-sale</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </rated>
+                    </fields>
+                </customer_config>
+            </groups>
+            <groups>
+                <guest_config>
+                    <label>Guest Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enabled>
+                        <number translate="label">
+                            <label>Number of total products in cross-sale</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </number>
+                        <selected translate="label">
+                            <label>Number of cross selling products selected from Magento admin.</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </selected>
+                        <random translate="label">
+                            <label>Number of random products for cross-selling</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </random>
+                        <bestsellers translate="label">
+                            <label>Number of best sell products for cross-sale</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </bestsellers>
+                        <rated translate="label">
+                            <label>Number of best rated products for cross-sale</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_items</source_model>
+                        </rated>
+                    </fields>
+                </guest_config>
+            </groups>
+            <groups>
+                <bestseller>
+                    <label>Best Sellers Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <range translate="label">
+                            <label>Time range to calculate the best sellers.</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_bestSellersTimeRange</source_model>
+                        </range>
+                    </fields>
+                </bestseller>
+            </groups>
+            <groups>
+                <random>
+                    <label>Random Products Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <type translate="label">
+                            <label>How random products were chosen.</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>crosssell/system_config_source_randomProductsType</source_model>
+                        </type>
+                    </fields>
+                </random>
+            </groups>
+        </crosssell>
+    </sections>
+</config>
