@@ -42,8 +42,8 @@ class Esime_CrossSell_Block_Cart_Crosssell extends Mage_Checkout_Block_Cart_Cros
      * @return array    resultArray
      */
     public function randomizedArray($originalArray, $nItems = -1) {
-        var $nItems = ($nItems == -1 ? count($originalArray) : $nItems);
-        var $resultArray = [];
+        $nItems = ($nItems == -1 ? count($originalArray) : $nItems);
+        $resultArray = [];
         //
         foreach (array_rand($originalArray, $nItems) as $itemId) {
             $resultArray[] = $originalArray[$itemId];
@@ -99,7 +99,7 @@ class Esime_CrossSell_Block_Cart_Crosssell extends Mage_Checkout_Block_Cart_Cros
         $cart = Mage::getModel('checkout/cart')->getQuote();
         foreach ($cart->getAllItems() as $item) {
             // get recommended product que administrator select in the magento admin
-            var $product = Mage::getModel('catalog/product')->load($item->getParentItemId() ? $item->getParentItemId() : $item->getProductId());
+            $product = Mage::getModel('catalog/product')->load($item->getParentItemId() ? $item->getParentItemId() : $item->getProductId());
             // append products in the result array
             foreach ($product->getCrossSellProducts() as $selectedProduct) {
                 $selectedProducts[] = $selectedProduct->getEntityId();

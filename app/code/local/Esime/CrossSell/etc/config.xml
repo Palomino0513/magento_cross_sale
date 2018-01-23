@@ -13,25 +13,17 @@
 				</rewrite>
 			</checkout>
 		</blocks>
+        <helpers>
+            <crosssell>
+                <class>Esime_CrossSell_Helper</class>
+            </crosssell>
+        </helpers>
         <models>
             <crosssell>
                 <class>Esime_CrossSell_Model</class>
-                <resourceModel>crosssell_resource</resourceModel>
+                <resourceModel>crosssell_mysql4</resourceModel>
             </crosssell>
-            <crosssell_resource>
-                <class>Esime_CrossSell_Model_Resource</class>
-                <entities>
-                    <bestsellers>
-                        <table>crosssell_bestsellers</table>
-                    </bestsellers>
-                </entities>
-            </crosssell_resource>
         </models>
- 		<helpers>
- 			<crosssell>
-                <class>Esime_CrossSell_Helper</class>
-            </crosssell>
- 		</helpers>
         <resources>
             <crosssell_setup>
                 <setup>
@@ -52,6 +44,17 @@
                 </connection>
             </crosssell_read>
         </resources>
+        <events>
+            <cms_page_prepare_save>
+                <observers>
+                    <Esime_CrossSell_Model_Observer>
+                        <type>singleton</type>
+                        <class>crosssell/observer</class>
+                        <method>saveProduct</method>
+                    </Esime_CrossSell_Model_Observer>
+                </observers>
+            </cms_page_prepare_save>
+        </events>
  	</global>
     <default>
         <crosssell>
